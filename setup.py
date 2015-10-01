@@ -56,11 +56,11 @@ class pylearn2_install(install):
               "location. If you know what you are doing, and are very sure "
               "that you want to install Pylearn2 using the `install` "
               "command instead, please type `install`.\n")
-        mode = None
-        while mode not in ['', 'install', 'develop', 'cancel']:
-            if mode is not None:
-                print("Please try again")
-            mode = input("Installation mode: [develop]/install/cancel: ")
+        mode = 'install'
+        #while mode not in ['', 'install', 'develop', 'cancel']:
+            #if mode is not None:
+                #print("Please try again")
+            #mode = input("Installation mode: [develop]/install/cancel: ")
         if mode in ['', 'develop']:
             self.distribution.run_command('develop')
         if mode == 'install':
